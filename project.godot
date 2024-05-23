@@ -11,5 +11,11 @@ config_version=5
 [application]
 
 config/name="Tetris"
+run/main_scene="res://Escenes/escena_de_joc.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Imágenes/icon.svg"
+
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=1200

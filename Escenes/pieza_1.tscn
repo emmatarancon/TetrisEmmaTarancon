@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr0kxvgsujhri"]
+
+[ext_resource type="Texture2D" uid="uid://c4rh371it84ti" path="res://Imágenes/element_blue_square.png" id="1_ue5oq"]
+
+[node name="Pieza1" type="Area2D"]
+
+[node name="ElementBlueSquare1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, 16)
+texture = ExtResource("1_ue5oq")
+
+[node name="ElementBlueSquare2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(48, 80)
+texture = ExtResource("1_ue5oq")
+
+[node name="ElementBlueSquare3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, 48)
+texture = ExtResource("1_ue5oq")
+
+[node name="ElementBlueSquare4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, 80)
+texture = ExtResource("1_ue5oq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 64, 64, 64, 64, 96, 0, 96)
