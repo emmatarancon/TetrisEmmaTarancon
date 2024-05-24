@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://baes4i4hf5k62"]
+
+[ext_resource type="Texture2D" uid="uid://0aipaekg61ge" path="res://Imágenes/element_purple_square.png" id="1_yub4b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsviq"]
+size = Vector2(32, 32)
+
+[node name="QuadratPeça2" type="Area2D"]
+
+[node name="ElementPurpleSquare" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_yub4b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qsviq")

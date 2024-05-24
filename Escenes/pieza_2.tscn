@@ -1,28 +1,20 @@
 [gd_scene load_steps=2 format=3 uid="uid://rcdccky7o12v"]
 
-[ext_resource type="Texture2D" uid="uid://0aipaekg61ge" path="res://Imágenes/element_purple_square.png" id="1_060nx"]
+[ext_resource type="PackedScene" uid="uid://baes4i4hf5k62" path="res://Escenes/quadrat_peça_2.tscn" id="1_dundc"]
 
 [node name="Pieza2" type="Area2D"]
 
-[node name="ElementPurpleSquare" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(48, 16)
-texture = ExtResource("1_060nx")
-
-[node name="ElementPurpleSquare2" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(16, 48)
-texture = ExtResource("1_060nx")
-
-[node name="ElementPurpleSquare3" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(48, 48)
-texture = ExtResource("1_060nx")
-
-[node name="ElementPurpleSquare4" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(80, 48)
-texture = ExtResource("1_060nx")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 32, 32, 32, 32, 0, 64, 0, 64, 32, 96, 32, 96, 64, 0, 64)
+
+[node name="QuadratPeça2" parent="." instance=ExtResource("1_dundc")]
+position = Vector2(48, 16)
+
+[node name="QuadratPeça2_1" parent="." instance=ExtResource("1_dundc")]
+position = Vector2(48, 48)
+
+[node name="QuadratPeça2_2" parent="." instance=ExtResource("1_dundc")]
+position = Vector2(16, 48)
+
+[node name="QuadratPeça2_3" parent="." instance=ExtResource("1_dundc")]
+position = Vector2(80, 48)
