@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://be1ppobyvft0u"]
+
+[ext_resource type="PackedScene" uid="uid://b1r22roehm5dm" path="res://Escenes/quadrícula_hritzontal.tscn" id="1_y4omw"]
+[ext_resource type="PackedScene" uid="uid://bmh2ptxjl4jla" path="res://Escenes/quadrícula.tscn" id="2_ihe7b"]
+
+[node name="quadriculacompeta" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="quadrícula_hritzontal" parent="." instance=ExtResource("1_y4omw")]
+layout_mode = 1
+
+[node name="quadrícula_vertical" parent="." instance=ExtResource("2_ihe7b")]
+layout_mode = 1

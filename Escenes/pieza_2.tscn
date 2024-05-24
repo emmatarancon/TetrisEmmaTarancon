@@ -1,20 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://rcdccky7o12v"]
+[gd_scene load_steps=3 format=3 uid="uid://rcdccky7o12v"]
 
 [ext_resource type="PackedScene" uid="uid://baes4i4hf5k62" path="res://Escenes/quadrat_peça_2.tscn" id="1_dundc"]
+[ext_resource type="Script" path="res://Scripts/pieza_2.gd" id="1_gp0nr"]
 
 [node name="Pieza2" type="Area2D"]
+script = ExtResource("1_gp0nr")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 32, 32, 32, 32, 0, 64, 0, 64, 32, 96, 32, 96, 64, 0, 64)
 
 [node name="QuadratPeça2" parent="." instance=ExtResource("1_dundc")]
-position = Vector2(48, 16)
+position = Vector2(32, 19)
 
 [node name="QuadratPeça2_1" parent="." instance=ExtResource("1_dundc")]
-position = Vector2(48, 48)
+position = Vector2(32, 51)
 
 [node name="QuadratPeça2_2" parent="." instance=ExtResource("1_dundc")]
-position = Vector2(16, 48)
+position = Vector2(0, 51)
 
 [node name="QuadratPeça2_3" parent="." instance=ExtResource("1_dundc")]
-position = Vector2(80, 48)
+position = Vector2(64, 51)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

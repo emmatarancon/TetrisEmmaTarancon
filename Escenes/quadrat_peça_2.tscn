@@ -6,10 +6,13 @@
 size = Vector2(32, 32)
 
 [node name="QuadratPeça2" type="Area2D"]
+position = Vector2(-16, 3)
 
 [node name="ElementPurpleSquare" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(16, -3)
 texture = ExtResource("1_yub4b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, -3)
 shape = SubResource("RectangleShape2D_qsviq")
