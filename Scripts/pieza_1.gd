@@ -5,8 +5,8 @@ extends Area2D
 func _ready():
 	Global.es_pot_moure=0
 	$Timer.start()
-	position.y = -64
-	position.x = 32*(randi_range(0,24))
+	position.y = -96
+	position.x = 32*(randi_range(0,25))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

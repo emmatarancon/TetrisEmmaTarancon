@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfx8d4pb7xy5s"]
+
+[ext_resource type="Texture2D" uid="uid://bbdl1rojc7r6t" path="res://Imágenes/element_green_square.png" id="1_uq748"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsvis"]
+size = Vector2(32, 32)
+
+[node name="cuadradito1" type="Area2D"]
+
+[node name="ElementGreenSquare" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_uq748")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wsvis")

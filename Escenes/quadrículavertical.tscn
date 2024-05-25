@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bmh2ptxjl4jla"]
+[gd_scene format=3 uid="uid://clper4a17pb5a"]
 
 [node name="quadrícula_vertical" type="Control"]
 layout_mode = 3
@@ -12,194 +12,194 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = -1.0
 offset_right = 1.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 31.0
 offset_right = 33.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 63.0
 offset_right = 65.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 95.0
 offset_right = 97.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 127.0
 offset_right = 129.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 159.0
 offset_right = 161.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 191.0
 offset_right = 193.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect8" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 223.0
 offset_right = 225.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 255.0
 offset_right = 257.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect10" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 287.0
 offset_right = 289.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect11" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 319.0
 offset_right = 321.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect12" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 351.0
 offset_right = 353.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect13" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 383.0
 offset_right = 385.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect14" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 415.0
 offset_right = 417.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect15" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 447.0
 offset_right = 449.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect16" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 479.0
 offset_right = 481.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect17" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 511.0
 offset_right = 513.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect18" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 543.0
 offset_right = 545.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect19" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 575.0
 offset_right = 577.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect20" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 607.0
 offset_right = 609.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect21" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 639.0
 offset_right = 641.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect22" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 671.0
 offset_right = 673.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect23" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 703.0
 offset_right = 705.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect24" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 735.0
 offset_right = 737.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect25" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 767.0
 offset_right = 769.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect26" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 799.0
 offset_right = 801.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect27" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 831.0
 offset_right = 833.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
 
 [node name="ColorRect29" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 863.0
 offset_right = 865.0
-offset_bottom = 1200.0
+offset_bottom = 1248.0
 color = Color(0.235294, 0.235294, 0.235294, 1)
