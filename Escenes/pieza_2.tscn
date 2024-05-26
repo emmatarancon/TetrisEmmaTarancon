@@ -6,6 +6,9 @@
 [node name="Pieza2" type="Area2D"]
 script = ExtResource("1_gp0nr")
 
+[node name="costats" type="Timer" parent="."]
+wait_time = 0.2
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 32, 32, 32, 32, 0, 64, 0, 64, 32, 96, 32, 96, 64, 0, 64)
 
@@ -21,7 +24,8 @@ position = Vector2(0, 51)
 [node name="QuadratPeça2_3" parent="." instance=ExtResource("1_dundc")]
 position = Vector2(64, 51)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="abaix" type="Timer" parent="."]
 wait_time = 0.5
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="costats" to="." method="_on_costats_timeout"]
+[connection signal="timeout" from="abaix" to="." method="_on_abaix_timeout"]

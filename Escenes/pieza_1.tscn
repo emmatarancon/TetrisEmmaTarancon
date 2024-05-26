@@ -21,7 +21,11 @@ position = Vector2(16, 16)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 0, 32, 0, 32, 64, 64, 64, 64, 96, 0, 96)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="abaix" type="Timer" parent="."]
 wait_time = 0.5
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="costats" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="abaix" to="." method="_on_abaix_timeout"]
+[connection signal="timeout" from="costats" to="." method="_on_costats_timeout"]

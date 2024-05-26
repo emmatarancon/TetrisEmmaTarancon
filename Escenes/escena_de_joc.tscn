@@ -1,17 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgwa3ldaiyk1h"]
+[gd_scene load_steps=3 format=3 uid="uid://dgwa3ldaiyk1h"]
 
 [ext_resource type="Script" path="res://Scripts/escena_de_joc.gd" id="1_htlbf"]
-[ext_resource type="PackedScene" uid="uid://casp36tl2wh11" path="res://Escenes/margeabaix.tscn" id="2_1hgjg"]
 [ext_resource type="PackedScene" uid="uid://be1ppobyvft0u" path="res://Escenes/quadriculacompeta.tscn" id="2_7lj6u"]
 
 [node name="EscenaDeJoc" type="Node2D"]
 script = ExtResource("1_htlbf")
 
-[node name="margeabaix" parent="." instance=ExtResource("2_1hgjg")]
-
-[node name="EsperaMovimentCostats" type="Timer" parent="."]
-wait_time = 0.2
-
 [node name="quadriculacompeta" parent="." instance=ExtResource("2_7lj6u")]
-
-[connection signal="timeout" from="EsperaMovimentCostats" to="." method="_on_espera_moviment_costats_timeout"]
