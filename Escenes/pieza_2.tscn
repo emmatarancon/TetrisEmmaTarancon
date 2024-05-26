@@ -13,16 +13,16 @@ wait_time = 0.2
 polygon = PackedVector2Array(0, 32, 32, 32, 32, 0, 64, 0, 64, 32, 96, 32, 96, 64, 0, 64)
 
 [node name="QuadratPeça2" parent="." instance=ExtResource("1_dundc")]
-position = Vector2(32, 19)
+position = Vector2(48, 16)
 
 [node name="QuadratPeça2_1" parent="." instance=ExtResource("1_dundc")]
-position = Vector2(32, 51)
+position = Vector2(48, 48)
 
 [node name="QuadratPeça2_2" parent="." instance=ExtResource("1_dundc")]
-position = Vector2(0, 51)
+position = Vector2(16, 48)
 
 [node name="QuadratPeça2_3" parent="." instance=ExtResource("1_dundc")]
-position = Vector2(64, 51)
+position = Vector2(80, 48)
 
 [node name="abaix" type="Timer" parent="."]
 wait_time = 0.5

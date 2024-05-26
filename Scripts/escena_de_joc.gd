@@ -18,4 +18,6 @@ func _process(delta):
 			var novapeça = peça2.instantiate()
 			add_child(novapeça)
 		Global.creanovapeça = false
+	print(Global.posicionns_ocupades)
+
 
