@@ -20,11 +20,13 @@ func _process(delta):
 		Global.creanovapeça = false
 
 func defineix_diccionari_posicions():
-	var i = 1
+	var i = -3
 	while i < Global.num_cuadraditos_vertical+1:
 		var j = 1
 		while j < Global.num_cuadraditos_horizontal+1:
 			Global.posicionns_ocupades["Y_"+str(i)+", X_"+str(j)] = true
+			Global.posicionns_ocupades["Y_"+str(i)+", X_0"] = false
+			Global.posicionns_ocupades["Y_"+str(i)+", X_"+str(Global.num_cuadraditos_horizontal+1)] = false
 			j += 1
 		i += 1
 	var k = 1
