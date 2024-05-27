@@ -39,6 +39,10 @@ func _on_abaix_timeout():
 	else:
 		$abaix.stop()
 		$costats.stop()
-		Global.posicionns_ocupades[position.x/Global.amplada_cuadraditos] = position.y/Global.amplada_cuadraditos
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] = false
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] = false
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] = false
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)+3)] = false
 		Global.creanovapeça = true
 		es_pot_moure = false
+		print(Global.posicionns_ocupades)
