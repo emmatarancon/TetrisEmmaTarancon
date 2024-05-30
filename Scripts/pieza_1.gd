@@ -4,6 +4,7 @@ const cuadraditos_vertical_pieza = 3
 const cuadraditos_horizontal_pieza = 2
 var es_pot_moure = true
 var viu = true
+var rotacio = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,7 +34,27 @@ func _process(delta):
 				position.x+= -Global.amplada_cuadraditos
 				es_pot_moure= false
 				$costats.start()
-
+		if Input.is_action_pressed("rotar"):
+			rotacio += 1
+			if rotacio == 1:
+				position.x += 2*Global.amplada_cuadraditos
+				position.y += Global.amplada_cuadraditos
+				rotation_degrees += 90
+			if rotacio == 2:
+				position.x += -Global.amplada_cuadraditos
+				position.y += 2*Global.amplada_cuadraditos
+				rotation_degrees += 90
+			if rotacio == 3:
+				position.x += -2*Global.amplada_cuadraditos
+				position.y += -Global.amplada_cuadraditos
+				rotation_degrees += 90
+			if rotacio == 4:
+				position.x += Global.amplada_cuadraditos
+				position.y += -2*Global.amplada_cuadraditos
+				rotation_degrees += 90
+				rotacio = 0
+			es_pot_moure= false
+			$costats.start()
 func _on_abaix_timeout():
 	if viu == true:
 		position.y += Global.amplada_cuadraditos

@@ -18,6 +18,7 @@ func _process(delta):
 			var novapeça = peça2.instantiate()
 			add_child(novapeça)
 		Global.creanovapeça = false
+	
 
 func defineix_diccionari_posicions():
 	var i = -3
@@ -34,5 +35,4 @@ func defineix_diccionari_posicions():
 		Global.posicionns_ocupades["Y_"+str(Global.num_cuadraditos_vertical+1)+", X_"+str(k)] = false
 		k += 1
 	#POSICIONS_OCUPADES = {[coordenada_y,coordenada_x]:true_o_false}
-	print(Global.posicionns_ocupades)
 
