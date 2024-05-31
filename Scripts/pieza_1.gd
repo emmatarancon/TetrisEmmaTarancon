@@ -5,6 +5,7 @@ const cuadraditos_horizontal_pieza = 2
 var es_pot_moure = true
 var viu = true
 var rotacio = 0
+var avall : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,12 +16,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if viu == true:
-		if Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+4)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+4)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] == false:
+		mirar_si_es_pot_moure_avall()
+		if avall == false:
 			viu = false
 			ha_acabat_de_moures()
 	if es_pot_moure == true and viu == true:
 		if Input.is_action_pressed("baixar"):
-			if Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+4)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] == true and Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+4)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] == true:
+			mirar_si_es_pot_moure_avall()
+			if avall == true:
 				position.y += Global.amplada_cuadraditos
 				es_pot_moure = false 
 				$costats.start() 
@@ -55,6 +58,24 @@ func _process(delta):
 				rotacio = 0
 			es_pot_moure= false
 			$costats.start()
+	print(avall)
+
+func mirar_si_es_pot_moure_avall():
+	if rotacio == 0:
+		if Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+4)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+4)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] == false:
+			avall = false
+		else:
+			avall = true
+	if rotacio == 1:
+		if Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+3)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+3)+", X_"+str((position.x/Global.amplada_cuadraditos)+3)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+3)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] == false:
+			avall = false
+		else:
+			avall = true
+	if rotacio == 2:
+		if Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+4)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] == false:
+			avall = false
+		else:
+			avall = true
 func _on_abaix_timeout():
 	if viu == true:
 		position.y += Global.amplada_cuadraditos
