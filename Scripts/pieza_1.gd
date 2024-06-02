@@ -5,7 +5,7 @@ const cuadraditos_horizontal_pieza = 2
 var es_pot_moure = true
 var viu = true
 var rotacio = 0
-var avall : bool
+var avall = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -58,7 +58,6 @@ func _process(delta):
 				rotacio = 0
 			es_pot_moure= false
 			$costats.start()
-	print(avall)
 
 func mirar_si_es_pot_moure_avall():
 	if rotacio == 0:
@@ -76,6 +75,14 @@ func mirar_si_es_pot_moure_avall():
 			avall = false
 		else:
 			avall = true
+	if rotacio == 3:
+		if Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+3)] == false:
+			avall = false
+
+func mirar_si_es_pot_moure_dreta():
+	if rotacio == 0:
+		pass
+
 func _on_abaix_timeout():
 	if viu == true:
 		position.y += Global.amplada_cuadraditos
@@ -85,9 +92,16 @@ func _on_costats_timeout():
 	es_pot_moure = true
 
 func ha_acabat_de_moures():
-	Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] = false
-	Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] = false
-	Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+3)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] = false
-	Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+3)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] = false
+	if rotacio == 0:
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] = false
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] = false
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+3)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] = false
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+3)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] = false
+	elif rotacio == 1:
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)-2)] = false
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)-2)] = false
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)-1)] = false
+		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+0)] = false
+	print(Global.posicionns_ocupades)
 	Global.creanovapeça = true
 	es_pot_moure = false

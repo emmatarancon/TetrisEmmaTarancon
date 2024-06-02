@@ -25,9 +25,10 @@ func defineix_diccionari_posicions():
 	while i < Global.num_cuadraditos_vertical+1:
 		var j = 1
 		while j < Global.num_cuadraditos_horizontal+1:
-			Global.posicionns_ocupades["Y_"+str(i)+", X_"+str(j)] = true
 			Global.posicionns_ocupades["Y_"+str(i)+", X_0"] = false
-			Global.posicionns_ocupades["Y_"+str(i)+", X_"+str(Global.num_cuadraditos_horizontal+1)] = false
+			Global.posicionns_ocupades["Y_"+str(i)+", X_"+str(j)] = true
+			if j == 28:
+				Global.posicionns_ocupades["Y_"+str(i)+", X_"+str(Global.num_cuadraditos_horizontal+j)] = false
 			j += 1
 		i += 1
 	var k = 1
