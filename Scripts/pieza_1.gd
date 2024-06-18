@@ -102,6 +102,8 @@ func ha_acabat_de_moures():
 		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)-2)] = false
 		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)-1)] = false
 		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+0)] = false
+	elif rotacio == 2:
+		pass
 	print(Global.posicionns_ocupades)
 	Global.creanovapeça = true
 	es_pot_moure = false
