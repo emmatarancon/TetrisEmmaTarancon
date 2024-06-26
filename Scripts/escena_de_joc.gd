@@ -10,7 +10,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Global.creanovapeça == true :
-		var peça = randi_range(1,2)
+		var peça = randi_range(1,1)
 		if peça == 1:
 			var novapeça = peça1.instantiate()
 			add_child(novapeça)
@@ -21,19 +21,19 @@ func _process(delta):
 	
 
 func defineix_diccionari_posicions():
-	var i = -3
-	while i < Global.num_cuadraditos_vertical+1:
-		var j = 1
-		while j < Global.num_cuadraditos_horizontal+1:
-			Global.posicionns_ocupades["Y_"+str(i)+", X_0"] = false
-			Global.posicionns_ocupades["Y_"+str(i)+", X_"+str(j)] = true
-			if j == 28:
-				Global.posicionns_ocupades["Y_"+str(i)+", X_"+str(Global.num_cuadraditos_horizontal+j)] = false
-			j += 1
-		i += 1
-	var k = 1
-	while k < Global.num_cuadraditos_horizontal:
-		Global.posicionns_ocupades["Y_"+str(Global.num_cuadraditos_vertical+1)+", X_"+str(k)] = false
-		k += 1
+	var y = -3
+	while y <= Global.num_cuadraditos_vertical:
+		Global.posicionns_ocupades["Y_"+str(y)+", X_0"] = false
+		var x = 1
+		while x <= Global.num_cuadraditos_horizontal:
+			Global.posicionns_ocupades["Y_"+str(y)+", X_"+str(x)] = true
+			x += 1
+		Global.posicionns_ocupades["Y_"+str(y)+", X_"+str(Global.num_cuadraditos_horizontal+1)] = false
+		y += 1
+	var x = 1
+	while x <= Global.num_cuadraditos_horizontal:
+		Global.posicionns_ocupades["Y_"+str(Global.num_cuadraditos_vertical+1)+", X_"+str(x)] = false
+		x += 1
+	print(Global.posicionns_ocupades)
 	#POSICIONS_OCUPADES = {[coordenada_y,coordenada_x]:true_o_false}
 
