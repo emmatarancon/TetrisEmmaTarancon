@@ -60,6 +60,7 @@ func _process(delta):
 			$costats.start()
 
 func mirar_si_es_pot_moure_avall():
+	# mira si els quadradets de sota estan ocupats
 	if rotacio == 0:
 		if Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+4)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+4)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] == false:
 			avall = false
@@ -79,11 +80,22 @@ func mirar_si_es_pot_moure_avall():
 		if Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+2)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+3)] == false:
 			avall = false
 
-func mirar_si_es_pot_moure_dreta():
+func mirar_si_es_pot_moure_esquerra():
+	#mira si els quadradets de l'esquerra estan ocupats
 	if rotacio == 0:
+		if Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+0)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)+0)] == false or Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+3)+", X_"+str((position.x/Global.amplada_cuadraditos)+0)] == false:
+			avall = false
+		else:
+			avall = true
+	if rotacio == 1:
+		pass
+	if rotacio == 2:
+		pass
+	if rotacio == 3:
 		pass
 
 func _on_abaix_timeout():
+	# fa que les peces vagin baixant automàticament
 	if viu == true:
 		position.y += Global.amplada_cuadraditos
 		$abaix.start()
@@ -92,6 +104,7 @@ func _on_costats_timeout():
 	es_pot_moure = true
 
 func ha_acabat_de_moures():
+	# afegeix la posicio de la peça a la llista de posicions ocupades
 	if rotacio == 0:
 		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+1)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] = false
 		Global.posicionns_ocupades["Y_"+str((position.y/Global.amplada_cuadraditos)+2)+", X_"+str((position.x/Global.amplada_cuadraditos)+1)] = false
